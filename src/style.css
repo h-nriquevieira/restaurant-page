@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+body > * {
+  padding: 1rem;
+}
+
+header {
+  background-color: #806D40;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 4px;
+}
+
+header button {
+  appearance: none;
+  border: none;
+  background-color: #806D40;
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white
+}
+
+#content {
+  background-color: #806D40;
+  min-height: 100vh;
+  color: white;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+}
+
+#content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em;
+  max-width: calc(1000px + (3*1em));
+}
+
+.card {
+  background-color: #F8F4A6;
+  color: #806D40;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+form > * {
+  min-width: 100%;
+}
+
+form input,
+form textarea {
+  padding: .3rem;
+}
+
+form a {
+  margin-top: 8px;
+  text-align: center;
+  background-color: #F8F4A6;
+  border-radius: 5px;
+  color: #806D40;
+  border: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form a:hover {
+  transform: scale(1.05);
+}
+
+
+@media screen and (min-width: 540px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  header button {
+    max-width: 220px;
+    text-align: center;
+  }
+}
