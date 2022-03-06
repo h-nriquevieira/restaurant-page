@@ -1,4 +1,6 @@
 import homePage from './home.js';
+import menuPage from './menu.js';
+import contactPage from './contact.js';
 
 const componentHandler = {
   
@@ -25,10 +27,10 @@ const componentHandler = {
         componentHandler.updatePage(homePage());
         break;
       case 'Menu':
-        componentHandler.deleteContent();
+        componentHandler.updatePage(menuPage());
         break;
       case 'Contact':
-        componentHandler.deleteContent();
+        componentHandler.updatePage(contactPage());
         break;
     }
   },
