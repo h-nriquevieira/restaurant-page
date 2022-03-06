@@ -6,6 +6,7 @@ function createMenuPage() {
   const nameInput = document.createElement('input');
   const messageLabel = document.createElement('label');
   const messageInput = document.createElement('textarea');
+  const send = document.createElement('a');
 
   header.textContent = 'Contact Us';
   copy.textContent = 'We love hearing from our clients!';
@@ -15,8 +16,9 @@ function createMenuPage() {
   messageLabel.textContent = 'Message:';
   messageLabel.htmlFor = 'message';
   messageInput.id = 'message';
+  send.textContent = 'Send Message';
 
-  contactForm.append(nameLabel, nameInput, messageLabel, messageInput);
+  contactForm.append(nameLabel, nameInput, messageLabel, messageInput, send);
 
   return [header, copy, contactForm];
 }
